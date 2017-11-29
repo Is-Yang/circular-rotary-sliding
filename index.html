@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cn">
     <head>
-		<meta charset="UTF-8" />
+	<meta charset="UTF-8" />
         <title>汽车转盘表-圆形滑动特效</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
@@ -13,11 +13,17 @@
                 overflow: hidden;
                 background: #1f1f1f;
                 font-family: "宋体";
+		-webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
             }
             #content {
                 position:absolute;
                 left: 50%;
                 top: 30%;
+		-webkit-transform: translate(-50%, -30%);    
                 transform: translate(-50%, -30%);
                 width: 360px;
                 height: 170px;
@@ -32,10 +38,10 @@
                 top: 50px;
                 width: 250px;
                 height: 250px;
+		-webkit-border-radius:50%;    
                 border-radius: 50%;
                 font-weight: bold;
                 color: white;
-                animation: spinZ 20s linear infinite;
                 text-align: center;
             }
             .emblem span {
@@ -47,6 +53,7 @@
                 bottom: 0;
                 text-transform: uppercase;
                 font-size: 3vh;
+	        cursor: pointer;
                 /*transition: all 0.5s cubic-bezier(0, 0, 0, 1);*/
             }
 
@@ -54,6 +61,7 @@
                 position: absolute;
                 bottom: 3%;
                 left: 50%;
+		-webkit-transform: translate(-50%,-3%);
                 transform: translate(-50%,-3%);
                 font-size: 13px;
                 color: #fff;
